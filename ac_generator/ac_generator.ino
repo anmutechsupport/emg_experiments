@@ -21,7 +21,7 @@ void setup() {
 void loop() {
 
     t = millis();
-    // val = (127*sin(2*pi*(freq1/fs)*t) + 127*sin(2*pi*(freq2/fs)*t))/2 + 127; // freq/fs discretizes/normalizes the frequency into 50/1000 cycles/sample. 2.5V peak AC voltage between pin 9 and 10 
+    // val = (127*sin(2*pi*(freq1/fs)*t) + 127*sin(2*pi*(freq2/fs)*t))/2 + 127; // freq/fs discretizes/normalizes the frequency into f/1000 cycles/sample. 2.5V peak AC voltage between pin 9 and 10 
     val = 127*sin(2*pi*(freq1/fs)*t) + 127;
     Serial.print(val);Serial.print(",");
     // why 127? -> analogWrite values range from 0-255 which map from 0 to 5V hence 127 corresponds to 2.5V
